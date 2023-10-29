@@ -29,5 +29,23 @@
         <activity
             android:name=".SecondActivity2"
             android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".SecondActivity3"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".SecondActivity4"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".SecondActivity5"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".SecondActivity6"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".SecondActivity7"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".SecondActivity8"
+            android:parentActivityName=".MainActivity"/>
     </application>
 </manifest>

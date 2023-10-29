@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat.*
 import com.example.intenthomework.ui.theme.IntentHomeworkTheme
 
-class SecondActivity : ComponentActivity() {
+class SecondActivity4 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -33,7 +33,7 @@ class SecondActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    SecondPage()
+                    FivePage()
                 }
             }
         }
@@ -41,16 +41,16 @@ class SecondActivity : ComponentActivity() {
 }
 
 @Composable
-fun SecondPage() {
+fun FivePage() {
     val context = LocalContext.current
-    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://youtu.be/SJw3Nu_h8kk?feature=shared"))
+    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://youtu.be/YdnM2ZvrIFM?feature=shared"))
 
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
-            painter = painterResource(id = R.drawable.banner2),
+            painter = painterResource(id = R.drawable.banner5),
             contentDescription = "Banner",
             modifier = Modifier
                 .fillMaxWidth()
@@ -58,7 +58,7 @@ fun SecondPage() {
             contentScale = ContentScale.FillWidth
         )
         Text(
-            text = "Activities & the Activity Lifecycle - Android Basics 2023",
+            text = "What is the Context? - Android Basics 2023",
             modifier = Modifier.padding(16.dp),
             style = TextStyle(fontSize = 18.sp)
         )
