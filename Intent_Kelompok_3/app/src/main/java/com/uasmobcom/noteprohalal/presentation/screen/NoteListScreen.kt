@@ -3,6 +3,7 @@ package com.uasmobcom.noteprohalal.presentation.screen
 import android.net.Uri
 import android.os.Build
 import androidx.annotation.RequiresApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,6 +27,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTag
@@ -48,6 +50,7 @@ fun NoteListScreen(
     Box(
         modifier = Modifier
             .semantics { testTag = "Note List Screen" }
+            .background(Color(0xff201390))
             .fillMaxSize()
     ) {
         LazyColumn(modifier = Modifier.fillMaxSize()) {
@@ -57,7 +60,8 @@ fun NoteListScreen(
 
                     Card(
                         modifier = Modifier
-                            .padding(8.dp)
+                            .padding(20.dp)
+                            .background(Color(0xff201390))
                             .semantics { testTag = "List Card $index" }
                             .clickable {
                                 val encodedTitle = Uri.encode(item.title)
@@ -70,7 +74,7 @@ fun NoteListScreen(
                                     "details-screen/${item.id}/${encodedTitle}/${encodedNote}"
                                 )
                             },
-                        elevation = CardDefaults.cardElevation(defaultElevation = 15.dp),
+                        elevation = CardDefaults.cardElevation(defaultElevation = 150.dp),
                     ) {
                         Column(modifier = Modifier.padding(16.dp)) {
                             Box(modifier = Modifier.fillMaxWidth()) {

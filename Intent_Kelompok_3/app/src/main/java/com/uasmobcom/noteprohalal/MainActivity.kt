@@ -60,7 +60,7 @@ fun Greeting() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                painter = painterResource(id = R.drawable.banner1),
+                painter = painterResource(id = R.drawable.banner_1),
                 contentDescription = "Thumbnail",
                 modifier = Modifier
                     .fillMaxWidth()

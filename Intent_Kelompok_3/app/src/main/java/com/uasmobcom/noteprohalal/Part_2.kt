@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.RequiresApi
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -29,6 +30,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTag
 import androidx.compose.ui.text.font.FontWeight
@@ -75,14 +77,14 @@ class SecondActivity2 : ComponentActivity() {
                             TopAppBar(
                                 title = {
                                     Text(
-                                        text = "Catatanku-",
-                                        color = MaterialTheme.colorScheme.onBackground,
+                                        text = "Note Pro Halal",
+                                        color = Color(0xffffffff),
                                         fontSize = 25.sp,
                                         fontWeight = FontWeight.Bold
                                     )
                                 },
                                 colors = TopAppBarDefaults.smallTopAppBarColors(
-                                    containerColor = MaterialTheme.colorScheme.background
+                                    containerColor = Color(0xff201390)
                                 ),
                                 actions = {
                                     var expandedOptionsMenu by remember {
@@ -105,7 +107,7 @@ class SecondActivity2 : ComponentActivity() {
                                         offset = DpOffset(0.dp, 12.dp),
                                         content = {
                                             DropdownMenuItem(
-                                                text = { Text(text = "Hapus Semua") },
+                                                text = { Text(text = "Delete All") },
                                                 modifier = Modifier
                                                     .semantics { testTag = "Delete All button" },
                                                 onClick = {
@@ -116,7 +118,7 @@ class SecondActivity2 : ComponentActivity() {
                                                 )
                                             )
                                             DropdownMenuItem(
-                                                text = { Text(text = "Hapus yang dipilih") },
+                                                text = { Text(text = "Delete Selected") },
                                                 modifier = Modifier
                                                     .semantics { testTag = "Delete Selected button" },
                                                 onClick = {
@@ -160,10 +162,10 @@ class SecondActivity2 : ComponentActivity() {
                             AlertDialog(
                                 onDismissRequest = { deleteSelectedAlertExpanded = !deleteSelectedAlertExpanded },
                                 title = {
-                                    Text("Hapus yang dipilih")
+                                    Text("Delete Selected")
                                 },
                                 text = {
-                                    Text("Apa kamu yakin untuk menghapus catatan yand dipilih?")
+                                    Text("Are you sure?")
                                 },
                                 confirmButton = {
                                     Button(
@@ -172,7 +174,7 @@ class SecondActivity2 : ComponentActivity() {
                                             deleteSelectedAlertExpanded = false
                                         }
                                     ) {
-                                        Text("Hapus")
+                                        Text("Delete")
                                     }
                                 },
                                 dismissButton = {
@@ -181,7 +183,7 @@ class SecondActivity2 : ComponentActivity() {
                                             deleteSelectedAlertExpanded = false
                                         }
                                     ) {
-                                        Text("Batal")
+                                        Text("Back")
                                     }
                                 }
                             )
@@ -191,10 +193,10 @@ class SecondActivity2 : ComponentActivity() {
                             AlertDialog(
                                 onDismissRequest = { deleteAllAlertExpanded = !deleteAllAlertExpanded },
                                 title = {
-                                    Text("Hapus Semua Catatan")
+                                    Text("Delete All")
                                 },
                                 text = {
-                                    Text("Apa kamu yakin untuk menghapus semua catatan?")
+                                    Text("Are you sure?")
                                 },
                                 confirmButton = {
                                     Button(
@@ -203,7 +205,7 @@ class SecondActivity2 : ComponentActivity() {
                                             deleteAllAlertExpanded = false
                                         }
                                     ) {
-                                        Text("Hapus semua")
+                                        Text("Delete All")
                                     }
                                 },
                                 dismissButton = {
@@ -212,20 +214,24 @@ class SecondActivity2 : ComponentActivity() {
                                             deleteAllAlertExpanded = false
                                         }
                                     ) {
-                                        Text("Batal")
+                                        Text("Back")
                                     }
                                 }
                             )
                         }
                         if (version) {
                             AlertDialog(
+                                containerColor = Color(0xffffffff),
                                 onDismissRequest = { version = !version },
                                 title = {
-                                    Text("Hello Friend!!")
+
+                                    Text("Introduction")
                                 },
+
                                 text = {
-                                    Text("my name is Faizal Rizqi Kholily, im from Ilmu Komputer 2021")
+                                    Text("Muhammad Ramadhan Putra Pratama, Ilmu Komputer UNJ 2021, 1313621038")
                                 },
+
                                 confirmButton = {
                                     Button(
                                         onClick = {

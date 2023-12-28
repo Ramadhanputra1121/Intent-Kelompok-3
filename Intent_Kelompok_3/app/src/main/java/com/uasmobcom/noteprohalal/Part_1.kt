@@ -43,14 +43,14 @@ class SecondActivity : ComponentActivity() {
 @Composable
 fun SecondPage() {
     val context = LocalContext.current
-    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://youtu.be/SJw3Nu_h8kk?feature=shared"))
+    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://youtube.com/playlist?list=PLQkwcJG4YTCSVDhww92llY3CAnc_vUhsm&feature=shared"))
 
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
-            painter = painterResource(id = R.drawable.banner2),
+            painter = painterResource(id = R.drawable.banner_1),
             contentDescription = "Banner",
             modifier = Modifier
                 .fillMaxWidth()
@@ -58,7 +58,7 @@ fun SecondPage() {
             contentScale = ContentScale.FillWidth
         )
         Text(
-            text = "Activities & the Activity Lifecycle - Android Basics 2023",
+            text = "Android Basics 2023",
             modifier = Modifier.padding(16.dp),
             style = TextStyle(fontSize = 18.sp)
         )
