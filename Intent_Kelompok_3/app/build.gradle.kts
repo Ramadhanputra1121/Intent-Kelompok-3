@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.intenthomework"
+    namespace = "com.uasmobcom.noteprohalal"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.intenthomework"
+        applicationId = "com.uasmobcom.noteprohalal"
         minSdk = 25
         targetSdk = 33
         versionCode = 1
